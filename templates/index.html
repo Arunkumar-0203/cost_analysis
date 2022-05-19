@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% load static %}
+
+        <div class="site-blocks-cover overlay" style="background-image: url({% static 'images/Bansagar3.jpg' %});" data-aos="fade" data-stellar-background-ratio="0.5"id="home-section">
+      <div class="container">
+        <div class="row align-items-center text-center justify-content-center">
+          <div class="col-md-8">
+            <h1 class="text-uppercase">Irrigation Department</h1>
+            <span class="sub-text mb-3 d-block"><em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam molestiae ipsam, atque.</em></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="site-section" id="projects-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-7 text-center">
+            <span class="sub-title">Awesome Projects</span>
+            <h2 class="font-weight-bold text-black">Our Projects</h2>
+            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, explicabo, quasi. Magni deserunt sunt labore.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4 project-entry">
+            <a href="{% static 'images/1.jpg' %}" class="d-block figure" data-fancybox="gallery">
+              <img src="{% static 'images/1.jpg' %}" alt="Image" class="img-fluid">
+            </a>
+            <h3 class="mb-0"><a href="#">Butterfly Bridge</a></h3>
+            <span class="text-muted">Interior</span>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 project-entry">
+            <a href="{% static 'images/Nepal_irrigation2_780x439.jpg' %}" class="d-block figure" data-fancybox="gallery">
+              <img src="{% static 'images/Nepal_irrigation2_780x439.jpg' %}" alt="Image" class="img-fluid">
+            </a>
+            <h3 class="mb-0"><a href="#">Canal Building</a></h3>
+            <span class="text-muted">Design</span>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 project-entry">
+            <a href="{% static 'images/Clarifier5.jpg' %}" class="d-block figure" data-fancybox="gallery">
+              <img src="{% static 'images/Clarifier5.jpg' %}" alt="Image" class="img-fluid">
+            </a>
+            <h3 class="mb-0"><a href="#">Pond Making</a></h3>
+            <span class="text-muted">Interior</span>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4 project-entry">
+            <a href="{% static 'images/unnamed.jpg' %}" class="d-block figure" data-fancybox="gallery">
+              <img src="{% static 'images/unnamed.jpg' %}" alt="Image" class="img-fluid">
+            </a>
+            <h3 class="mb-0"><a href="#">Irrigation Office Kerala</a></h3>
+            <span class="text-muted">Interior</span>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 project-entry">
+            <a href="{% static 'images/unnamed.png' %}" class="d-block figure" data-fancybox="gallery">
+              <img src="{% static 'images/unnamed.png' %}" alt="Image" class="img-fluid">
+            </a>
+            <h3 class="mb-0"><a href="#">ParathaPuzha Bund</a></h3>
+            <span class="text-muted">Design</span>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 project-entry">
+            <a href="{% static 'images/Water_Resources_Bhawan.jpg' %}" class="d-block figure" data-fancybox="gallery">
+              <img src="{% static 'images/Water_Resources_Bhawan.jpg' %}" alt="Image" class="img-fluid">
+            </a>
+            <h3 class="mb-0"><a href="#">Water_Resources_Bhawan</a></h3>
+            <span class="text-muted">Interior</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+{% endblock %}

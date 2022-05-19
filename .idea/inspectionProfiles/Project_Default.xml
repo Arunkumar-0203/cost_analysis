@@ -1,0 +1,16 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="cost_analysis.urls.*" />
+          <option value="tender.models.GuestReg" />
+          <option value="tender.models.senior" />
+          <option value="tender.models.contractor" />
+          <option value="tender.con_views.IndexView" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

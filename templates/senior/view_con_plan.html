@@ -1,0 +1,35 @@
+{% extends 'senior/senior_base.html' %}
+{% block content %}
+    {% load static %}
+
+<br>
+<br>
+<br>
+<div class="site-section about-section" id="about-section">
+      <div class="container">
+          {% for dri in pla  %}
+        <div class="row align-items-center mb-5 pb-5">
+          <div class="col-lg-7 img-years mb-5 mb-lg-0">
+            <a href="{{ dri.plan.url }}">Click to View Plan</a>
+            <img src="{{ dri.plan.url }}"  alt="Click to View Plan" class="img-fluid">
+          </div>
+          <div class="col-lg-4 ml-auto">
+            <span class="sub-title">Learn To Know</span>
+            <h3 class="mb-4">{{ dri.work.name }}</h3>
+            <p class="mb-4">Period Complete :{{ dri.periodcompltete }}</p>
+            <ul class="list-unstyled ul-check text-left success mb-5">
+                <li>Contractor :{{ dri.user.first_name }}</li>
+                <li>{{ dri.user.email }}</li>
+                <li>Estimate Amount :{{ dri.estimate }}</li>
+                <li>Deposit Amount :{{ dri.deposit }}</li>
+              </ul>
+            <p><a href="confirm_plan?id={{ dri.work.id }}&planid={{ dri.id }}" class="btn btn-primary btn-lg rounded-0">Confirm</a></p>
+
+          </div>
+        </div>
+
+        {% endfor %}
+      </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends 'contractor/conbase.html' %}
+{% block content %}
+    {% load static %}
+    <br>
+    <br>
+    <br>
+<div class="site-section bg-light" id="contact-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-7 text-center">
+            <span class="sub-title"></span>
+            <h2 class="font-weight-bold text-black">ADD WORK STATUS</h2>
+            <p class="mb-5">Give a Work status</p>
+          </div>
+        </div>
+
+<div class="row">
+
+          <div class="col-md-12 col-lg-12">
+
+            <form action="#" class="p-5 bg-white" method="post" ENCTYPE="multipart/form-data">
+                {% csrf_token %}
+              <div class="row form-group">
+                <div class="col-md-12 mb-3 mb-md-0">
+                  <label class="font-weight-bold" for="fullname">Description</label>
+                  <input type="text"  class="form-control"  name="desc" required>
+                </div>
+              </div>
+              <label  class="font-weight-bold" for="fullname">Status</label>
+                <div>
+                   <select type="text" class="form-control" name="status" required>
+                    <option value="">Select Status</option>
+                    <option>25% Work Completed</option>
+                    <option>50% Work Completed</option>
+                    <option>75% Work Completed</option>
+                    <option>Work Completed</option>
+                   </select>
+                </div>
+              <div class="row form-group">
+                <div class="col-md-12 mb-3 mb-md-0">
+                  <label class="font-weight-bold" for="fullname">Upload Document or Photo of Work</label>
+                  <input type="file"  class="form-control"  name="files" required>
+                </div>
+              </div>
+              <div class="row form-group">
+                <div class="col-md-12 mb-3 mb-md-0">
+                  <label class="font-weight-bold" for="fullname"></label>
+                  <input type="hidden" value="{{ id }}"  class="form-control"  name="plan" required>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <input type="submit" value="Update" class="btn btn-primary rounded-0 btn-lg">
+                </div>
+              </div>
+
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+{% endblock %}

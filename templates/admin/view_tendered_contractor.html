@@ -1,0 +1,43 @@
+{% extends 'admin/admin_base.html' %}
+{% block content %}
+{% load static %}
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="site-section bg-light" id="contact-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-7 text-center">
+            <span class="sub-title"></span>
+            <h2 class="font-weight-bold text-black">WORK APPLICATION</h2>
+            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, explicabo, quasi. Magni deserunt sunt labore.</p>
+          </div>
+        </div>
+          {% for gu in Contractors  %}
+        <div class="row mb-5">
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 post-entry">
+            <a href="#" class="d-block figure">
+              <img src="{{ gu.plan.url }}" alt="Image" class="img-fluid">
+            </a>
+            <span class="text-muted d-block mb-1">{{ gu.periodcompltete }}</span>
+            <h3><a href="#">{{ gu.work.name }}</a></h3>
+            <h3><a href="#">Work Confirmed Contractor :{{ gu.user.first_name }}</a></h3>
+            <h3><a href="#">Estimate Amount :${{ gu.estimate }}</a></h3>
+            <h3><a href="#">Deposit Amount :${{ gu.deposit }}</a></h3>
+          </div>
+
+        </div>
+              <a href="work_status_view?id={{ gu.work.id }}" class="btn btn-primary btn-lg rounded-0">View Work Status</a>
+              <a href="request_fund?id={{ gu.work.id }}" class="btn btn-primary btn-lg rounded-0">Any Fund Request</a>
+            {% endfor %}
+        <div class="row mt-5 text-center">
+          <div class="col-12">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+{% endblock %}

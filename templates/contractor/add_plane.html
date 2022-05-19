@@ -1,0 +1,72 @@
+{% extends 'contractor/conbase.html' %}
+{% block content %}
+    {% load static %}
+    <BR>
+    <BR>
+    <BR>
+<div class="site-section bg-light" id="contact-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-7 text-center">
+            <span class="sub-title"></span>
+            <h2 class="font-weight-bold text-black">ADD PLAN FOR TENDER ALLOCATION</h2>
+            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, explicabo, quasi. Magni deserunt sunt labore.</p>
+          </div>
+        </div>
+
+<div class="row">
+
+          <div class="col-md-12 col-lg-12">
+
+            <form action="#" class="p-5 bg-white" method="post" ENCTYPE="multipart/form-data">
+                {% csrf_token %}
+              <div class="row form-group">
+                <div class="col-md-12 mb-3 mb-md-0">
+                  <label class="font-weight-bold" for="fullname">Add Plan</label>
+                  <input type="file" id="fullname" class="form-control"  name="plan" required>
+                </div>
+              </div>
+              <div class="row form-group">
+                <div class="col-md-12 mb-3 mb-md-0">
+                  <label class="font-weight-bold" for="fullname">Period Of Complete</label>
+                  <input type="date" id="fullname" class="form-control"  name="complete" required>
+                </div>
+              </div>
+              <div class="row form-group">
+                <div class="col-md-12 mb-3 mb-md-0">
+                  <label class="font-weight-bold" for="fullname">Estimate Amount</label>
+                  <input type="number"  class="form-control"  name="estimate" required>
+                </div>
+              </div>
+                <div class="row form-group">
+                 <div class="col-md-12 mb-3 mb-md-0">
+                  <label class="font-weight-bold" for="fullname"></label>
+                  <input  type="hidden" value="{{ id }}" class="form-control"  name="work_id" required>
+                 </div>
+                </div>
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <label class="font-weight-bold" for="email">Deposit Amount</label>
+                  <input type="number"  class="form-control"  name="deposit" required>
+                </div>
+              </div>
+              <div class="row form-group">
+                <div class="col-md-12 mb-3 mb-md-0">
+                  <label class="font-weight-bold" for="fullname">Other Description</label>
+                  <input type="text" id="fullname" class="form-control"  name="description" required>
+                </div>
+              </div>
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <input type="submit" value="POST TENDER" class="btn btn-primary rounded-0 btn-lg">
+                </div>
+              </div>
+
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+{% endblock %}

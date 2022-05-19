@@ -1,0 +1,63 @@
+{% extends 'admin/admin_base.html' %}
+{% block content %}
+{% load static %}
+
+<br>
+    <br>
+    <br>
+    <br>
+    <div class="site-section bg-light" id="contact-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-7 text-center">
+            <span class="sub-title"></span>
+            <h2 class="font-weight-bold text-black">FUND REQUEST</h2>
+            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, explicabo, quasi. Magni deserunt sunt labore.</p>
+          </div>
+        </div>
+
+          {% if st == 'True' %}
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="person">
+              <div class="bio-img">
+                <div class="social">
+                  <a href="#"><span class="icon-facebook"></span></a>
+                  <a href="#"><span class="icon-twitter"></span></a>
+                  <a href="#"><span class="icon-instagram"></span></a>
+                </div>
+              </div>
+              <h2>Request Amount :{{ re.amount }}</h2>
+              <span class="sub-title d-block mb-3">Work :{{ re.work.name }}</span>
+              <p>Contractor :{{ re.user.first_name }}</p>
+              <p>Amount Offered To Work :{{ pl.estimate }}</p>
+                <a href="request_fund_accept?id={{ re.work.id }}" class="btn btn-primary btn-lg rounded-0">Confirm</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+              {% else %}
+              <div class="row">
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="person">
+              <div class="bio-img">
+                <div class="social">
+                  <a href="#"><span class="icon-facebook"></span></a>
+                  <a href="#"><span class="icon-twitter"></span></a>
+                  <a href="#"><span class="icon-instagram"></span></a>
+                </div>
+              </div>
+              <h2>No request found...!</h2>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% endif %}
+
+{% endblock %}

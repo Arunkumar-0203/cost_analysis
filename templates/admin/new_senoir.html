@@ -1,0 +1,51 @@
+{% extends 'admin/admin_base.html' %}
+{% block content %}
+{% load static %}
+{#    <h1>Admin Dashboard</h1>#}
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="site-section bg-light" id="contact-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-7 text-center">
+            <span class="sub-title"></span>
+            <h2 class="font-weight-bold text-black">NEW ENGINEERS</h2>
+            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, explicabo, quasi. Magni deserunt sunt labore.</p>
+          </div>
+        </div>
+<div id="page-inner">
+{% if message %}
+<script>
+alert("{{ message }}")
+</script>
+{% endif %}
+
+<table class="table table-bordered table-striped table-hover">
+
+<th class="info">Engineer Name</th>
+<th class="info">Email</th>
+<th class="info">Contact Number</th>
+<th class="info">Address</th>
+<th class="info">Approve</th>
+<th class="info">Reject</th>
+{% for en in engineer  %}
+
+<tr>
+    <td>{{ en.user.first_name}}</td>
+    <td>{{ en.user.email}}</td>
+    <td>{{ en.contact}}</td>
+    <td>{{ en.address}}</td>
+    <td><a href="approve?id={{ en.user_id}}" class=" btn btn-success">Approve</a></td>
+    <td><a href="reject?id={{ en.user_id}}" class=" btn btn-danger">Reject</a></td>
+
+</tr>
+
+    {% endfor %}
+</table>
+        </div>
+      </div>
+    </div>
+
+{% endblock %}

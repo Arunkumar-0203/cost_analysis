@@ -1,0 +1,30 @@
+{% extends 'guest/guest_base.html' %}
+{% block content %}
+    {% load static %}
+<br>
+<br>
+<br>
+<div class="site-section" id="news-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <span class="sub-title">News</span>
+            <h2 class="font-weight-bold text-black mb-5">Completed Works</h2>
+          </div>
+        </div>
+          {% for dri in com  %}
+        <div class="row mb-5">
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 post-entry">
+            <a href="#" class="d-block figure">
+              <img src="{{ dri.files  }}" alt="Image" class="img-fluid">
+            </a>
+            <span class="text-muted d-block mb-1">{{ dri.status }}</span>
+            <h3><a href="#">{{ dri.plans.work.name }}</a></h3>
+          </div>
+        </div>
+          {% endfor %}
+      </div>
+</div>
+
+
+{% endblock %}

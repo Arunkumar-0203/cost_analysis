@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% load static %}
+{##}
+{#<section class="table1" id="home">#}
+{##}
+{##}
+{#    <center><h1>SHOW YOUR ARHICTECTURAL CONCEPT</h1>#}
+{##}
+{#					<h4 class="search-title">LOGIN HERE  !!!!!</h4></center>#}
+{#								<center><h2>Login</h2></center>#}
+{#	                              <form method="post">#}
+{#                                      {% csrf_token %}#}
+{#	                                 <center><table class="tab1">#}
+{#                                             <tr><td>USER NAME</td><td><input type="text" class="app-select form-control" name="username"></td></tr>#}
+{#                                             <tr><td>PASSWORD</td><td><input type="password" class="app-select form-control" name="password"></td></tr>#}
+{#                                             <tr><td><center><button type="submit">LOGIN</button></center></td></tr>#}
+{# 	                                 </table></center>#}
+{#	                              </form>#}
+{#    <center><a href="/">Register</a></center>#}
+{#</section>#}
+<br>
+<br>
+<br>
+<br>
+
+<div class="site-section bg-light" id="contact-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-7 text-center">
+            <span class="sub-title"></span>
+            <h2 class="font-weight-bold text-black">LOGIN HERE</h2>
+            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, explicabo, quasi. Magni deserunt sunt labore.</p>
+          </div>
+        </div>
+
+<div class="row">
+
+          <div class="col-md-12 col-lg-12">
+
+            <form action="#" class="p-5 bg-white" method="post">
+                {% csrf_token %}
+              <div class="row form-group">
+                <div class="col-md-12 mb-3 mb-md-0">
+                  <label class="font-weight-bold" for="fullname">User Name</label>
+                  <input type="text" id="fullname" class="form-control"  name="username" required>
+                </div>
+              </div>
+              <div class="row form-group">
+                <div class="col-md-12 mb-3 mb-md-0">
+                  <label class="font-weight-bold" for="fullname">Password</label>
+                  <input type="password" id="fullname" class="form-control"  name="password" required>
+                </div>
+              </div>
+              {% if message %}
+         <script> alert("{{ message }}")</script>
+     {% endif %}
+
+
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <input type="submit" value="LOGIN" class="btn btn-primary rounded-0 btn-lg">
+                </div>
+              </div>
+
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+{% endblock %}

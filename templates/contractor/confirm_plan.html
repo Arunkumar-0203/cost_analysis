@@ -1,0 +1,33 @@
+{% extends 'contractor/conbase.html' %}
+{% block content %}
+    {% load static %}
+    <br>
+    <br>
+    <br>
+<div class="site-section" id="projects-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-7 text-center">
+            <span class="sub-title">Projects</span>
+            <h2 class="font-weight-bold text-black">MY WORKS</h2>
+            <p class="mb-5">Make Project Easily</p>
+          </div>
+        </div>
+          {% for gu in Con  %}
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4 project-entry">
+            <a href="images/img_1.jpg" class="d-block figure" data-fancybox="gallery">
+              <img src="{{ gu.plan.url }}" alt="Image" class="img-fluid">
+            </a>
+            <h3 class="mb-0"><a href="#">{{ gu.work.name }}</a></h3>
+{#            <span class="text-muted">{{ gu.status }}</span>#}
+              <a href="work_status?id={{ gu.work.id }}" class="btn btn-primary btn-lg rounded-0">Update Work Status</a>
+              <a href="request_fund?id={{ gu.work.id }}" class="btn btn-primary btn-lg rounded-0">Request Fund</a>
+          </div>
+
+        </div>
+          {% endfor %}
+      </div>
+    </div>
+
+{% endblock %}

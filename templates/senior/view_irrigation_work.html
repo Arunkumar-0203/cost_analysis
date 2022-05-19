@@ -1,0 +1,35 @@
+{% extends 'senior/senior_base.html' %}
+{% block content %}
+    {% load static %}
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="site-section" id="services-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-7 text-center">
+            <span class="sub-title"></span>
+            <h2 class="font-weight-bold text-black">VIEW IRRIGATION DEPARTMENT WORK</h2>
+            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, explicabo, quasi. Magni deserunt sunt labore.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-5">
+            <div class="media custom-media">
+                {% for dri in works  %}
+              <div class="mr-3 icon"><span class="flaticon-measuring display-4"></span></div>
+              <div class="media-body">
+                <h5 class="mt-0">{{ dri.name }}</h5>
+                <h5 class="mt-0">{{ dri.place }}</h5>
+                {{ dri.details }}
+              </div>
+                  {% endfor %}
+            </div>
+
+        </div>
+      </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'admin/admin_base.html' %}
+{% block content %}
+    {% load static %}
+<br>
+<br>
+<br>
+
+
+
+    <div class="site-section" id="projects-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-7 text-center">
+            <span class="sub-title">Projects</span>
+            <h2 class="font-weight-bold text-black">WORKING STATUS</h2>
+            <p class="mb-5">Updated By Contractors</p>
+          </div>
+        </div>
+          {% for dri in sta  %}
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4 project-entry">
+            <a href="{{ dri.files }}" class="d-block figure" data-fancybox="gallery">
+              <img src="{{ dri.files.url }}" alt="Image" class="img-fluid">
+            </a>
+            <h3 class="mb-0"><a href="#">{{ dri.descri }}</a></h3><br>
+            <span class="text-muted">{{ dri.plans.work.name }}</span><br>
+            <span class="text-muted">{{ dri.status }}</span><br>
+            <span class="text-muted">Contractor Name :{{ dri.plans.user.first_name }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endfor %}
+
+{% endblock %}

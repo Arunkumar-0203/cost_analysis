@@ -1,0 +1,46 @@
+{% extends 'admin/admin_base.html' %}
+{% block content %}
+{% load static %}
+{#    <h1>Admin Dashboard</h1>#}
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="site-section bg-light" id="contact-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-7 text-center">
+            <span class="sub-title"></span>
+            <h2 class="font-weight-bold text-black">CONTRACTOR LIST</h2>
+            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, explicabo, quasi. Magni deserunt sunt labore.</p>
+          </div>
+        </div>
+<div id="page-inner" >
+{#<h1>Contractor List</h1>#}
+<table class="table table-bordered table-striped table-hover">
+
+<th class="success">Guest Name</th>
+<th class="success">Email</th>
+<th class="success">Contact Number</th>
+<th class="success">Address</th>
+<th class="success">Date Of Join</th>
+<th class="success">Remove</th>
+{% for con in Contractors %}
+
+<tr>
+    <td>{{ con.user.first_name}}</td>
+    <td>{{ con.user.email}}</td>
+    <td>{{ con.contact}}</td>
+    <td>{{ con.address}}</td>
+    <td>{{ con.user.date_joined}}</td>
+    <td><a href="reject?id={{ con.user_id}}" class=" btn btn-danger">Remove</a></td>
+
+</tr>
+
+    {% endfor %}
+</table>
+        </div>
+      </div>
+    </div>
+
+{% endblock %}

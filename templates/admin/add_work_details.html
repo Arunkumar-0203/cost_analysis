@@ -1,0 +1,57 @@
+{% extends 'admin/admin_base.html' %}
+{% block content %}
+{% load static %}
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="site-section bg-light" id="contact-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-7 text-center">
+            <span class="sub-title"></span>
+            <h2 class="font-weight-bold text-black">ADD NEW WORK FOR DO </h2>
+            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, explicabo, quasi. Magni deserunt sunt labore.</p>
+          </div>
+        </div>
+
+<div class="row">
+
+          <div class="col-md-12 col-lg-12">
+
+            <form action="#" class="p-5 bg-white" method="post">
+                {% csrf_token %}
+              <div class="row form-group">
+                <div class="col-md-12 mb-3 mb-md-0">
+                  <label class="font-weight-bold" for="fullname">Name</label>
+                  <input type="text" id="fullname" class="form-control"  name="name" required>
+                </div>
+              </div>
+              <div class="row form-group">
+                <div class="col-md-12 mb-3 mb-md-0">
+                  <label class="font-weight-bold" for="fullname">Place</label>
+                  <input type="text" id="fullname" class="form-control"  name="place" required>
+                </div>
+              </div>
+              <div class="row form-group">
+                <div class="col-md-12 mb-3 mb-md-0">
+                  <label class="font-weight-bold" for="fullname">Details</label>
+                  <input type="text" id="fullname" class="form-control"  name="details" required>
+                </div>
+              </div>
+               <div class="row form-group">
+                <div class="col-md-12">
+                  <input type="submit" value="Post Work" class="btn btn-primary rounded-0 btn-lg">
+                </div>
+              </div>
+
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+{% endblock %}

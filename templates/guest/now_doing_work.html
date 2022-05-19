@@ -1,0 +1,38 @@
+{% extends 'guest/guest_base.html' %}
+{% block content %}
+    {% load static %}
+<br>
+<br>
+<br>
+<div class="site-section" id="services-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-7 text-center">
+            <span class="sub-title"></span>
+            <h2 class="font-weight-bold text-black">Works On Progress</h2>
+            <p class="mb-5">Recently Doing Works Details</p>
+          </div>
+        </div>
+
+        <div class="row">
+           {% for dri in plan  %}
+          <div class="col-lg-4 col-md-6 mb-5">
+            <div class="media custom-media">
+              <div class="mr-3 icon"><span class="flaticon-interior-design display-4"></span></div>
+              <div class="media-body">
+                <h5 class="mt-0">{{ dri.work.name }}</h5>
+                <p>Contractor Name :{{ dri.user.first_name }}</p>
+                <p>Email :{{ dri.user.email }}</p>
+                <p>Completion Date :{{ dri.periodcompltete }}</p>
+                <p>Estimate Amount :{{ dri.estimate }}</p>
+                <p>Accepted Engineer Name :{{ dri.work.user.first_name }}</p>
+                <p>Email :{{ dri.work.user.email }}</p>
+              </div>
+            </div>
+          </div>
+            {% endfor %}
+        </div>
+      </div>
+</div>
+
+{% endblock %}

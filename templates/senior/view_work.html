@@ -1,0 +1,49 @@
+{% extends 'senior/senior_base.html' %}
+{% block content %}
+    {% load static %}
+    <br>
+    <br>
+    <br>
+    <br>
+<div class="site-section bg-light" id="contact-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-7 text-center">
+            <span class="sub-title"></span>
+            <h2 class="font-weight-bold text-black">VIEW WORKS </h2>
+            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, explicabo, quasi. Magni deserunt sunt labore.</p>
+          </div>
+        </div>
+
+<div class="site-section" id="pricing-section">
+
+    <div class="container">
+
+     <div class="row">
+         {% for dri in work  %}
+       <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 pricing">
+
+            <div class="border p-5 text-center rounded">
+              <h3>{{ dri.name}}</h3>
+              <div class="price mb-3"><sup class="currency">$</sup><span class="number">{{ dri.estiamount}}</span> <span class="per"></span></div>
+              <p class="text-muted mb-4"></p>
+              <ul class="list-unstyled ul-check text-left success mb-5">
+                <li>{{ dri.depoamount}}</li>
+                <li>{{ dri.periodcompltete}}</li>
+                <li>{{ dri.tenddocm}}</li>
+                <li>{{ dri.othdesc}}</li>
+              </ul>
+            </div>
+
+       </div>
+         {% endfor %}
+     </div>
+
+</div>
+
+</div>
+      </div>
+</div>
+
+
+{% endblock %}
